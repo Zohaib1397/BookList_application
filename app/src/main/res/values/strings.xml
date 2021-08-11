@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">BookLists</string>
+    <string name="all_book_list">All Books</string>
+    <string name="detail_book">Book Details</string>
+    <string name="want_to_read">Want To Read List</string>
+    <string name="already_read">Already Read List</string>
+    <string name="favorite_books">Favorite Books</string>
+    <string name="currently_reading">Currently Reading</string>
+</resources>

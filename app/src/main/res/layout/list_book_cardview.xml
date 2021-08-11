@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="10dp"
+    app:cardCornerRadius="10dp"
+    android:layout_margin="20dp"
+    android:id="@+id/cardParent"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:clickable="true"
+    android:hapticFeedbackEnabled="true">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/collapsedRelativeLayout">
+
+        <ImageView
+            android:id="@+id/imageBook"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@mipmap/ic_launcher" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BookName"
+            android:layout_below="@+id/imageBook"
+            android:layout_margin="5dp"
+            android:id="@+id/txtBookName"
+            android:textStyle="bold"/>
+
+        <ImageView
+            android:id="@+id/imageDownArrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageBook"
+            android:layout_alignEnd="@+id/imageBook"
+            android:padding="4dp"
+            android:src="@drawable/ic_down_arrow"
+            android:clickable="true"
+            android:foreground="?android:selectableItemBackground"/>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtBookName"
+            android:id="@+id/expendedRelativeLayout"
+            android:visibility="gone">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Author:"
+                android:id="@+id/txtAuthor"
+                android:layout_marginLeft="5dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtAuthorName"
+                android:layout_toRightOf="@+id/txtAuthor"
+                android:text="Name"
+                android:layout_marginLeft="5dp"/>
+            <TextView
+                android:layout_below="@+id/txtAuthor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Date:"
+                android:id="@+id/txtDateFix"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="2dp"/>
+            <TextView
+                android:layout_below="@+id/txtAuthorName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtDate"
+                android:layout_toRightOf="@+id/txtDateFix"
+                android:text="Date"
+                android:layout_marginLeft="5dp"
+                android:paddingBottom="5dp"
+                android:layout_marginTop="2dp"/>
+
+            <ImageView
+                android:id="@+id/imageUpArrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtDateFix"
+                android:layout_alignLeft="@+id/txtAuthor"
+                android:layout_marginLeft="116dp"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:paddingBottom="4dp"
+                android:src="@drawable/ic_upword_arrow" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtDateFix"
+                android:layout_marginLeft="90dp"
+                android:padding="2dp"
+                android:src="@drawable/ic_delete_btn"
+                android:id="@+id/delete_button"
+                android:visibility="gone"/>
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
